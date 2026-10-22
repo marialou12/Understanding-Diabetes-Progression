@@ -33,6 +33,23 @@ The project repository is organized as follows:
 
 ---
 
+## 📝 Personal Reflection
+
+### What Worked Well
+*   **Model Optimization**: Shifting to the three-pillar model (`BMI + BP + S5`) raised the explained variance to 48.0% while keeping VIF metrics perfectly clean (< 1.35).
+*   **Script Reliability**: The automated package installation loop ensured flawless, cross-platform code execution.
+
+### What Was Difficult
+*   **Serum Collinearity**: Disentangling the massive overlap among metabolic serum metrics (such as S1 and S2 where r = 0.90) required strict bivariate filtering.
+*   **Nuanced Wording**: Framing highly significant associations within an observational framework without implying direct biological causation.
+
+### What I Would Improve with More Time
+*   **Validation**: Add a train-test split or cross-validation routine to test model generalization.
+*   **Non-Linearity**: Evaluate polynomial terms to better model the right-skewed progression distribution.
+*   **Interactions**: Test interaction effects to see if biological sex or age moderates the impact of BMI.
+
+---
+
 ## 🚀 How to Run the Analysis Locally
 
 ### Prerequisites
@@ -46,3 +63,4 @@ Ensure you have **R** and **RStudio** installed. The script will automatically c
 2.  Ensure `diabetes.tab.txt` is stored in the **same directory** as the R script.
 3.  Open `diabete-project.R` in RStudio.
 4.  Run the script from top to bottom, or use `knitr::spin("diabete-project.R")` to recompile the full HTML/PDF report seamlessly.
+
